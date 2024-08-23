@@ -1,3 +1,9 @@
+Capture
+
+<p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/about.JPG" width="400" alt="about"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/home" width="400" alt="home"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/contact.JPG" width="400" alt="contact"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/service.JPG" width="400" alt="service"></a></p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
