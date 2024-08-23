@@ -1,8 +1,12 @@
 Capture
 
+<strong>Home</strong>
 <p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/home.JPG" width="800" alt="home"></a></p>
+<strong>About</strong>
 <p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/about.JPG" width="800" alt="about"></a></p>
+<strong>Service</strong>
 <p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/service.JPG" width="800" alt="service"></a></p>
+<strong>Contact</strong>
 <p align="center"><a href="" target="_blank"><img src="https://github.com/danirosady/company-cms-rappo-laravel11/blob/main/public/images/capture/contact.JPG" width="800" alt="contact"></a></p>
 
 <br>
