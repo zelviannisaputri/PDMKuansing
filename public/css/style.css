@@ -226,8 +226,8 @@ img {
 .bg-primary,
 .btn-primary,
 .btn-white:hover {
-  background: #21c87a !important;
-  border-color: #21c87a !important;
+  background: #006742 !important;
+  border-color: #006742 !important;
   color: #fff;
 }
 
@@ -280,11 +280,11 @@ img {
 }
 
 .bg-primary {
-  background: #21c87a !important;
+  background: #006742 !important;
 }
 
 a {
-  color: #21c87a;
+  color: #006742;
   transition: 0.3s;
 }
 
@@ -306,7 +306,7 @@ a:focus {
   padding: 8px;
 }
 .header-socials li a {
-  color: #21c87a;
+  color: #006742;
 }
 
 /*-----------------
@@ -326,7 +326,7 @@ a:focus {
 
 .icon-block {
   margin-right: 20px;
-  color: #21c87a;
+  color: #006742;
   font-size: 40px;
   line-height: 20px;
   font-weight: 400;
@@ -350,14 +350,14 @@ a:focus {
  HOME-3
 ---------------------------*/
 .header-white {
-  background: #21c87a;
+  background: #006742;
   box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
   border-radius: 0px;
 }
 
 @media (max-width: 992px) {
   .trans-navigation {
-    background: #21c87a;
+    background: #469b72;
     box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
     border-radius: 0px;
   }
@@ -472,16 +472,17 @@ PAGE BANNER
 .page-service {
   position: relative;
   padding: 180px 0px;
-  background: url("../images/banner/service.jpg") fixed 50% 50% no-repeat;
+  background: url("../images/musyawarah-daerah.jpg") fixed 50% 50% no-repeat;
   background-size: cover;
 }
 
 .page-about {
   position: relative;
   padding: 180px 0px;
-  background: url("../images/banner/about.jpg") fixed 50% 50% no-repeat;
+  background: url("../images/musyawarah-daerah.jpg") fixed 50% 50% no-repeat;
   background-size: cover;
 }
+
 
 .page-pricing {
   position: relative;
@@ -546,7 +547,7 @@ PAGE BANNER
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
   text-transform: uppercase;
 }
 
@@ -641,7 +642,7 @@ PAGE BANNER
   border-radius: 4px;
 }
 .has-dropdown .dropdown-menu a:focus, .has-dropdown .dropdown-menu a:hover {
-  background: #21c87a;
+  background: #006742;
   color: #fff;
 }
 
@@ -678,7 +679,7 @@ PAGE BANNER
 
 .dropdown-submenu:hover > .dropdown-item,
 .dropdown-item:hover {
-  background: #21c87a;
+  background: #006742;
   color: #fff !important;
 }
 
@@ -797,7 +798,7 @@ ul.dropdown-menu li {
   position: absolute;
   content: "";
   top: -27px;
-  background-color: #21c87a;
+  background-color: #006742;
   opacity: 0.3;
   width: 80px;
   right: 70px;
@@ -820,7 +821,7 @@ ABOUT-2
   box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
 }
 #about .img-block img {
-  border: 5px solid #21c87a;
+  border: 5px solid #006742;
 }
 
 .pt-6 {
@@ -835,7 +836,7 @@ ABOUT-2
  SERVICE
 -----------------------*/
 h5.subtitle {
-  color: #21c87a;
+  color: #006742;
   margin-bottom: 10px;
   font-weight: 300;
 }
@@ -865,7 +866,7 @@ h5.subtitle {
   font-size: 25px;
   width: 50px;
   height: 50px;
-  background: #21c87a;
+  background: #006742;
   text-align: center;
   border-radius: 50%;
   padding-top: 5px;
@@ -925,7 +926,7 @@ h5.subtitle {
   border-color: transparent;
 }
 .web-service-block:hover i {
-  color: #21c87a;
+  color: #006742;
 }
 .web-service-block:hover h3 {
   color: #111;
@@ -1000,7 +1001,7 @@ h5.subtitle {
   box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
 }
 .project-content-block h4 {
-  color: #21c87a;
+  color: #006742;
 }
 .project-content-block p {
   margin-top: 25px;
@@ -1036,7 +1037,7 @@ h5.subtitle {
   position: absolute;
   left: 30px;
   top: -23px;
-  background: #21c87a;
+  background: #006742;
   color: #fff;
 }
 .overlay-content-block h4 {
@@ -1139,7 +1140,7 @@ h5.subtitle {
   font-family: "Font Awesome 5 Free";
   left: 0px;
   top: 5px;
-  color: #21c87a;
+  color: #006742;
   font-weight: 900;
 }
 
@@ -1214,7 +1215,7 @@ PRICING-2
   margin: 20px 0px;
 }
 .blog-content:hover a h3 {
-  color: #21c87a;
+  color: #006742;
 }
 .blog-content h6 span {
   display: inline-block;
@@ -1304,11 +1305,11 @@ CONTACT PAGE
   font-size: 40px;
   margin-bottom: 20px;
   display: block;
-  color: #21c87a;
+  color: #006742;
 }
 
 .form-control:focus, .form-control:hover {
-  border-color: #21c87a;
+  border-color: #006742;
   box-shadow: none;
 }
 
@@ -1386,7 +1387,7 @@ CONTACT PAGE
 }
 
 .current-year {
-  color: #21c87a !important;
+  color: #006742 !important;
 }
 
 /*-----------------------------
@@ -1398,7 +1399,7 @@ CONTACT PAGE
   right: 30px;
   bottom: 50px;
   z-index: 999;
-  background: #21c87a;
+  background: #006742;
   color: #fff !important;
   border-radius: 100%;
   opacity: 0;
@@ -1625,7 +1626,7 @@ CONTACT PAGE
   }
   .navbar-collapse.collapse.show {
     padding-bottom: 30px;
-    background: #21c87a;
+    background: #006742;
   }
   #map {
     margin-top: 40px;
@@ -1656,7 +1657,7 @@ CONTACT PAGE
   }
   .navbar-collapse.collapse.show {
     padding-bottom: 30px;
-    background: #21c87a;
+    background: #469b72;
   }
   .top-info-block {
     text-align: center;
@@ -1878,7 +1879,7 @@ CONTACT PAGE
   }
   .navbar-collapse.collapse.show {
     padding-bottom: 30px;
-    background: #21c87a;
+    background: #006742;
   }
   .web-service-block {
     margin-bottom: 30px;

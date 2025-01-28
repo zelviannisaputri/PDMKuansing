@@ -3,478 +3,158 @@
 @section('title', 'Home')
 
 @section('content')
+    <style>
+        /* Carousel styles */
+        .carousel {
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-<!-- HERO
-    ================================================== -->
-    <section class="banner-area py-7">
-        <!-- Content -->
+        .carousel-inner img {
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .carousel-indicators {
+            margin-bottom: 40px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #59636c;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* Custom Controls */
+        .custom-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .custom-controls button {
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-controls button:hover {
+            background-color: #59636c;
+        }
+
+        /* Banner section */
+        .banner-area {
+            margin-top: 100px;
+        }
+    </style>
+    <section style="margin-top: 70px;">
         <div class="container">
-            <div class="row  align-items-center">
-                <div class="col-md-12 col-lg-7 text-center text-lg-left">
+            <div id="carouselExampleAutoplay" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/kerjasama.jpg" class="d-block w-100" alt="Foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/tabligh-akbar.jpeg" class="d-block w-100" alt="Foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/musyawarah-daerah.jpg" class="d-block w-100" alt="Foto 3">
+                    </div>
+                </div>
+                <div class="custom-controls">
+                    <button type="button" onclick="prevSlide()">← </button>
+                    <button type="button" onclick="nextSlide()"> →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-area py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <div class="banner-img-block text-center">
+                        <img src="images/pimpinan.jpg" alt="banner-img" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 text-center text-lg-left">
                     <div class="main-banner">
-                        <!-- Heading -->
-                        <h1 class="display-4 mb-4 font-weight-normal">
-                            Industry Leading Managed Services Solutions
+                        <h1 class="mb-4 font-weight-normal">
+                            Sambutan Pimpinan
                         </h1>
-
-                        <!-- Subheading -->
-                        <p class="lead mb-4">
-                           Rappo is set of landing and support pages aimed at helping companies promote new products and business launches.
+                        <h4>Selamat Datang di Website Profil PDM Kuantan Singingi</h4>
+                        <p style="text-align: justify; text-indent: 1.27cm;">
+                            Assalamu'alaikum warahmatullahi wabarakatuh,
+                            Alhamdulillah, segala puji bagi Allah SWT yang telah memberikan rahmat dan karunia-Nya kepada
+                            kita semua. Shalawat serta salam semoga selalu tercurah kepada Nabi Muhammad SAW, keluarga,
+                            sahabat, dan umat Islam yang setia mengikuti ajaran-Nya.Dalam kesempatan ini, kami ingin
+                            menyampaikan rasa terima kasih yang mendalam kepada seluruh
+                            jajaran pengurus, anggota, serta masyarakat yang senantiasa mendukung perjuangan Muhammadiyah di
+                            Kabupaten Kuantan Singingi. Bersama-sama, kita berkomitmen untuk mewujudkan masyarakat yang
+                            berkemajuan serta siap untuk menghadapi tantangan zaman dengan semangat yang penuh ikhlas dan
+                            amanah. Mari kita lanjutkan perjuangan dakwah dan amal usaha Muhammadiyah di Kuansing dengan
+                            penuh
+                            kesungguhan dan kebersamaan. Semoga Allah SWT senantiasa memberikan petunjuk, kekuatan, serta
+                            keberkahan dalam setiap langkah yang kita ambil untuk kemajuan umat dan bangsa. Aamiin.
                         </p>
-
-                        <!-- Button -->
-                        <p class="mb-0">
-                            <a href="#!" target="_blank" class="btn btn-primary btn-circled">
-                                Purchase now
+                        <p class="mb-0" style="text-align: right;">
+                            <a href="{{ url('home/sambutanpimpinan') }}" target="_blank"
+                                class="btn btn-primary btn-circled">
+                                Baca Lebih Banyak
                             </a>
                         </p>
                     </div>
                 </div>
-
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="banner-img-block">
-                        <img src="images/banner-img-5.png" alt="banner-img" class="img-fluid">
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
-    </section>
-
-
- <section class="section bg-grey" id="feature">
-        <div class="container">
-            <div class="row justy-content-center">
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="text-center feature-block">
-                        <div class="img-icon-block mb-4">
-                            <i class="ti-thumb-up"></i>
-                        </div>
-                        <h4 class="mb-2">The right advice</h4>
-                        <p>Our team are experts in matching you with the right provider.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="text-center feature-block">
-                        <div class="img-icon-block mb-4">
-                            <i class="ti-cup"></i>
-                        </div>
-                        <h4 class="mb-2">Recognised for excellence</h4>
-                        <p>We've been awarded for our high rate of customer satisfaction.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="text-center feature-block">
-                        <div class="img-icon-block mb-4">
-                            <i class="ti-wallet"></i>
-                        </div>
-                        <h4 class="mb-2">Compare the best</h4>
-                        <p>We only compare market leaders with a reputation for service quality.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="text-center feature-block">
-                        <div class="img-icon-block mb-4">
-                            <i class="ti-dashboard"></i>
-                        </div>
-                        <h4 class="mb-2">Premium Services</h4>
-                        <p>We only compare market leaders with a reputation for service quality.</p>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- / .container -->
-    </section>
-
-
-
-    <!-- SERVICE-1
-    ================================================== -->
-    <section class="bg-grey" id="service">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-4">
-                    <div class="service-img">
-                        <img src="images/blog-lg.jpg" alt="" class="img-fluid">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 pl-4">
-                    <div class="service-content">
-                        <h1>Get a better deal and start saving money today</h1>
-                        <p>We compare hundreds of leading products and plans across many categories to bring you the best value for money.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="pt-5 service-wrap">
+    <section class="section py-2 mb-4" id="process">
         <div class="container">
-            <div class="row ">
-                <div class="col-lg-8 offset-lg-4">
-                    <div class="carousel slide " id="service-carousel" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="service-block media">
-                                                <div class="service-icon">
-                                                    <i class="ti-reload"></i>
-                                                </div>
-                                                <div class="service-inner-content media-body">
-                                                    <h4>Backup System</h4>
-                                                    <p>Our team are experts in matching you with the right provider.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="service-block media">
-                                                <div class="service-icon">
-                                                    <i class="ti-cloud"></i>
-                                                </div>
-                                                <div class="service-inner-content media-body">
-                                                    <h4>Cloud Hosting</h4>
-                                                    <p>Our team are experts in matching you with the right provider.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-lg-6 text-center">
+                    <h2 class="section-title">Berita</h2>
+                    <div class="divider mb-4" style="width: 100px; height: 3px; background-color: #3498db; margin: 0 auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center">
+                @foreach (['seminar-sehari-tarjih.jpeg', 'tabligh-akbar.jpeg', 'kajian-bulanan.jpg'] as $index => $image)
+                    <div class="col-lg-4 col-md-6 col-12 mb-3">
+                        <div class="blog-box">
+                            <div class="blog-img-box">
+                                <img src="images/{{ $image }}" alt="" class="img-fluid blog-img"
+                                    style="width: 400px; height: 200px; object-fit: cover; border-radius: 10px;">
                             </div>
-
-                            <div class="carousel-item">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="service-block media">
-                                                <div class="service-icon">
-                                                    <i class="ti-world"></i>
-                                                </div>
-                                                <div class="service-inner-content media-body">
-                                                    <h4>Web hosting</h4>
-                                                    <p>Our team are experts in matching you with the right provider.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="service-block media">
-                                                <div class="service-icon">
-                                                    <i class="ti-server"></i>
-                                                </div>
-                                                <div class="service-inner-content media-body">
-                                                    <h4>Office Cloud</h4>
-                                                    <p>Our team are experts in matching you with the right provider.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="single-blog">
+                                <div class="blog-content text-justify">
+                                    <h6>17 October 2024</h6>
+                                    <a href="#!">
+                                        <h3 class="card-title">{{ $titles[$index] ?? 'Judul Berita' }}</h3>
+                                    </a>
+                                    <p>There are many variations of passages Lorem Ipsum available, but majority have ama
+                                        suffered altratio. the lorem.</p>
+                                    <div class="text-right">
+                                        <a href="/berita" class="btn btn-primary btn-circled">Baca Lebih Banyak</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p class="pl-3">Want to know more about this? <a href="#!">Contact us</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<section class="section" id="process">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title">
-                            Our Working process
-                        </h2>
-
-                        <!-- Subheading -->
-                        <p>
-                            Rappo can be used to create anything from a small marketing page to a sophisticated website.
-                        </p>
-
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-                        <h3>Project Research</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="images/process/process-2.jpg" alt="" class="img-fluid">
-
-                        <h3>Project demostration</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="images/process/process-3.jpg" alt="" class="img-fluid">
-
-                        <h3>Development & delivery</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<section class="section" id="services-2">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title mb-2 text-white">
-                            Web Services
-                        </h2>
-
-                        <!-- Subheading -->
-                        <p class="mb-5 text-white">
-                            Rappo can be used to create anything from a small marketing page to a sophisticated website.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-light-bulb"></i>
-                        <h3>Creative Design</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-desktop"></i>
-                        <h3>Web Development</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-announcement"></i>
-                        <h3>Digital Marketing</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-layers-alt"></i>
-                        <h3>Graphic Design</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-mobile"></i>
-                        <h3>App Development</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-settings"></i>
-                        <h3>Wordpress Installation</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="section" id="projects-wrap">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h1 class="text-white">We are trying to deliver 100% quality product and success their business to achieve ultimate goal.</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <p class="lead text-white">We are providing best service since 1990 to present , committed to best service delivery.Nullam metus enim, placerat in lacus vel, porttitor egestas libero. Etiam ex risus, feugiat eget accumsan eu, sagittis eu urna. In eget ultrices metus. Nunc accumsan </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section-bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                    <div class="single-project">
-                        <img src="images/projects/p-1.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project: onepage</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                    <div class="single-project">
-                        <img src="images/projects/p-4.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project: business</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8 ">
-                    <div class="single-project">
-                        <img src="images/projects/p-3.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project : Marketing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row py-4">
-                <div class="col-lg-7 col-md-12 col-sm-12 ">
-                    <div class="single-project">
-                        <img src="images/bg/banner_bg.jpg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 ">
-                    <div class="project-content-block">
-                        <h4>Do you know who we are?</h4>
-                        <h2>More than just service your products...</h2>
-                        <p>Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and we will give you a complete account of the system.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="section" id="section-testimonial">
-        <div class="container">
-           <div class="row align-items-center">
-                <div class="col-lg-4 col-sm-12 col-md-12">
-                    <div class="section-heading testimonial-heading">
-                        <h1>What they say <br>about us</h1>
-                        <p>Numquam doloribus impedit at consectetur molestiae tempora ratione possimus in veniam aperiam, eum consequuntur, unde. Earum ullam molestiae suscipit saepe sunt recusandae.</p>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-1.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-2.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-3.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-4.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-5.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="test-inner">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="images/client/test-6.jpg" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
