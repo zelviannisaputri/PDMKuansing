@@ -157,3 +157,7 @@ Route::get('/bukupanduan', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
