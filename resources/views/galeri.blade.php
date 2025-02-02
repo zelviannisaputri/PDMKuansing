@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- HERO
-        ================================================== -->
+                                ================================================== -->
     <section class="page-banner-area page-service">
         <div class="overlay"></div>
         <!-- Content -->
@@ -35,50 +35,62 @@
             </div> <!-- / .row -->
 
             <div class="row">
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-1.jpeg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>Maisir Terpilih sebagai Ketua PDM Kuantan Singingi Periode 2022-2027</p>
+                @php
+                    $data = DB::table('galleries')->get();
+                @endphp
+                @foreach ($data as $key => $value)
+                    <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
+                        <div class="web-service-block">
+                            <a href="{{ url('galeri/detail/' . $value->id) }}" class="img-prod">
+                                <h3>Galeri</h3>
+                                <p>Maisir Terpilih sebagai Ketua PDM Kuantan Singingi Periode 2022-2027</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-2.jpeg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>Majelis Tarjih dan Tajdid PDM Kuansing Sosialisasikan KHGT</p>
+                    <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
+                        <div class="web-service-block">
+                            <img src="images/pdm/gambar-2.jpeg" alt="" class="img-fluid"
+                                style="width: 100%; height: auto;">
+                            <h3>Galeri</h3>
+                            <p>Majelis Tarjih dan Tajdid PDM Kuansing Sosialisasikan KHGT</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-3.jpg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>Muhammad Sayuti: Ponpes KH Ahmad Dahlan Kuansing Sekolah dan Pondoknya Keren</p>
+                    <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
+                        <div class="web-service-block">
+                            <img src="images/pdm/gambar-3.jpg" alt="" class="img-fluid"
+                                style="width: 100%; height: auto;">
+                            <h3>Galeri</h3>
+                            <p>Muhammad Sayuti: Ponpes KH Ahmad Dahlan Kuansing Sekolah dan Pondoknya Keren</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-4.jpg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>PDM Kuantan Singingi, Gelar Kajian Bulanan</p>
+                    <div class="col-lg-4 col-sm-6 col-md-6 ">
+                        <div class="web-service-block">
+                            <img src="images/pdm/gambar-4.jpg" alt="" class="img-fluid"
+                                style="width: 100%; height: auto;">
+                            <h3>Galeri</h3>
+                            <p>PDM Kuantan Singingi, Gelar Kajian Bulanan</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-5.jpg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>Febri Mahmud Kembali Diamanahkan sebagai Ketua Pemuda Muhammadiyah Kuansing Periode 2021-2024</p>
+                    <div class="col-lg-4 col-sm-6 col-md-6 ">
+                        <div class="web-service-block">
+                            <img src="images/pdm/gambar-5.jpg" alt="" class="img-fluid"
+                                style="width: 100%; height: auto;">
+                            <h3>Galeri</h3>
+                            <p>Febri Mahmud Kembali Diamanahkan sebagai Ketua Pemuda Muhammadiyah Kuansing Periode 2021-2024
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <img src="images/pdm/gambar-6.jpg" alt="" class="img-fluid" style="width: 100%; height: auto;">
-                        <h3>Galeri</h3>
-                        <p>Komitmen Membangun Bangsa, Muhammadiyah dan Aisyiyah Kuansing Dikukuhkan</p>
+                    <div class="col-lg-4 col-sm-6 col-md-6 ">
+                        <div class="web-service-block">
+                            <img src="images/pdm/gambar-6.jpg" alt="" class="img-fluid"
+                                style="width: 100%; height: auto;">
+                            <h3>Galeri</h3>
+                            <p>Komitmen Membangun Bangsa, Muhammadiyah dan Aisyiyah Kuansing Dikukuhkan</p>
+                        </div>
                     </div>
-                </div>
+                    </a>
             </div>
+            @endforeach
         </div>
     </section>
 

@@ -4,9 +4,9 @@
 
 @section('content')
     <!-- HERO
-                            ============================================s====== -->
+                                ============================================s====== -->
     <section class="page-banner-area page-about">
-        {{-- <div class="overlay"></div> --}}
+        <div class="overlay"></div>
         <!-- Content -->
         <div class="container">
             <div class="row justify-content-center">

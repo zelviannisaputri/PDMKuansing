@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\BeritaController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -132,6 +137,9 @@ Route::get('/berita', function () {
 Route::get('/galeri', function () {
     return view('galeri');
 });
+Route::get('/galeri/detail/{id}', [GalleryController::class, "detail"]);
+Route::get('/detailgaleri/{id}', [GalleryController::class, 'detail'])->name('detailgaleri.show');
+
 Route::get('/dokumen', function () {
     return view('dokumen.dokumen');
 });
@@ -159,5 +167,22 @@ Route::get('/kontak', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+    return view('admin.dash', ['content' => 'admin.dash']);
 });
+
+
+
+Route::get('/gallery', [GalleryController::class, 'index']);
+// Route::post('/gallery', [GalleryController::class, "addNewGallery"]);
+Route::post('/gallery', [GalleryController::class, 'store'])->name('simpangaleri');
+Route::get('/gallery/{id}', [GalleryController::class, "destroy"]);
+// Route::get('/gallery/detail/{id}', [GalleryController::class, "detail"]);
+// Route::get('/detailproduct/{id}', [GalleryController::class, 'detail'])->name('detailproduct.show');
+
+
+// Route::get('/berita', function () {
+//     return view('admin.main', ['content' => 'admin.berita']);
+// });
+
+Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/kontakkami', [KontakController::class, 'index']);
